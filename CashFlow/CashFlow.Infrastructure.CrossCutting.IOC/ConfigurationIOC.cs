@@ -7,6 +7,9 @@ using CashFlow.Domain.Services.Services;
 using CashFlow.Infrastructure.CrossCutting.Adapter.Interfaces;
 using CashFlow.Infrastructure.CrossCutting.Adapter.Map;
 using CashFlow.Infrastructure.Repository.Repositorys;
+using Microsoft.Extensions.Logging;
+using Serilog;
+using Serilog.Sinks.Elasticsearch;
 
 namespace CashFlow.Infrastructure.CrossCutting.IOC
 {

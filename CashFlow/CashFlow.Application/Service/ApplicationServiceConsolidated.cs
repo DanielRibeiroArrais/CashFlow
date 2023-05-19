@@ -3,17 +3,21 @@ using CashFlow.Application.Interfaces;
 using CashFlow.Domain.Core.Interfaces.Services;
 using CashFlow.Domain.Models;
 using CashFlow.Infrastructure.CrossCutting.Adapter.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace CashFlow.Application.Service
 {
     public class ApplicationServiceConsolidated : IApplicationServiceConsolidated
     {
+        private readonly ILogger<ApplicationServiceConsolidated> _logger;
+
         private readonly IServiceConsolidated _serviceConsolidated;
         private readonly IMapperConsolidated _mapperConsolidated;
         private readonly IServiceMovements _serviceMovements;
 
-        public ApplicationServiceConsolidated(IServiceConsolidated serviceConsolidated, IMapperConsolidated mapperConsolidated, IServiceMovements serviceMovements)
+        public ApplicationServiceConsolidated(ILogger<ApplicationServiceConsolidated> log, IServiceConsolidated serviceConsolidated, IMapperConsolidated mapperConsolidated, IServiceMovements serviceMovements)
         {
+            _logger = log;
             _serviceConsolidated = serviceConsolidated;
             _mapperConsolidated = mapperConsolidated;
             _serviceMovements = serviceMovements;
@@ -36,6 +40,8 @@ namespace CashFlow.Application.Service
 
         public async Task CashFlowConsolidateAsync()
         {
+            _logger.LogInformation($"Call CashFlowConsolidateAsync");
+
             var existingMovements = await _serviceMovements.GetAllAsync();
             var existingConsolidateds = await _serviceConsolidated.GetAllAsync();
 

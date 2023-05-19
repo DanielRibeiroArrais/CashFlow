@@ -11,10 +11,12 @@ namespace CashFlow.Presentation.Controllers
     [ApiController]
     public class MovementsController : ControllerBase
     {
+        private readonly ILogger<MovementsController> _logger;
         private readonly IApplicationServiceMovements _applicationServiceMovements;
 
-        public MovementsController(IApplicationServiceMovements applicationServiceMovements)
+        public MovementsController(ILogger<MovementsController> log, IApplicationServiceMovements applicationServiceMovements)
         {
+            _logger = log;
             _applicationServiceMovements = applicationServiceMovements;
         }
 
@@ -26,6 +28,7 @@ namespace CashFlow.Presentation.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<MovementsDTO?>> GetByIdAsync([FromRoute] int id)
         {
+            _logger.LogInformation($"Call MovementsController.GetByIdAsync => {id}");
             return await _applicationServiceMovements.GetByIdAsync(id);
         }
 
@@ -36,6 +39,7 @@ namespace CashFlow.Presentation.Controllers
         [HttpGet("")]
         public async Task<ActionResult<List<MovementsDTO>>> GetAllAsync()
         {
+            _logger.LogInformation($"Call MovementsController.GetAllAsync");
             return Ok(await _applicationServiceMovements.GetAllAsync());
         }
 
@@ -47,6 +51,7 @@ namespace CashFlow.Presentation.Controllers
         [HttpPost("")]
         public async Task CreateAsync([FromBody] MovementsDTO movements)
         {
+            _logger.LogInformation($"Call MovementsController.CreateAsync => {movements}");
             await _applicationServiceMovements.CreateAsync(movements);
         }
 
@@ -60,6 +65,8 @@ namespace CashFlow.Presentation.Controllers
         public async Task UpdateAsync([FromRoute] int id, [FromBody] MovementsDTO movement)
         {
             movement.Id = id;
+
+            _logger.LogInformation($"Call MovementsController.UpdateAsync => {id} and {movement}");
             await _applicationServiceMovements.UpdateAsync(movement);
         }
     }

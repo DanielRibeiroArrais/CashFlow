@@ -11,10 +11,12 @@ namespace CashFlow.Presentation.Controllers
     [ApiController]
     public class ConsolidatedController : ControllerBase
     {
+        private readonly ILogger<ConsolidatedController> _logger;
         private readonly IApplicationServiceConsolidated _applicationServiceConsolidated;
 
-        public ConsolidatedController(IApplicationServiceConsolidated applicationServiceConsolidated)
+        public ConsolidatedController(ILogger<ConsolidatedController> log, IApplicationServiceConsolidated applicationServiceConsolidated)
         {
+            _logger = log;
             _applicationServiceConsolidated = applicationServiceConsolidated;
         }
 
@@ -25,15 +27,9 @@ namespace CashFlow.Presentation.Controllers
         [HttpGet("")]
         public async Task<ActionResult<IEnumerable<ConsolidatedDTO>>> GetAllAsync()
         {
+            _logger.LogInformation($"Call ConsolidatedController.GetAllAsync");
             return Ok(await _applicationServiceConsolidated.GetAllAsync());
         }
-
-        [HttpGet("Teste")]
-        public async Task<ActionResult<DateTime>> GetTeste()
-        {
-            return Ok(DateTime.Now);
-        }
-
 
         /// <summary>
         /// Consulta todos os consolidados por ano
@@ -44,6 +40,7 @@ namespace CashFlow.Presentation.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ConsolidatedDTO>>> GetByYearAsync(int year)
         {
+            _logger.LogInformation($"Call ConsolidatedController.GetByYearAsync => {year}");
             return Ok(await _applicationServiceConsolidated.GetByYearAsync(year));
         }
 
@@ -57,6 +54,7 @@ namespace CashFlow.Presentation.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ConsolidatedDTO>>> GetByMonthYearAsync(int month, int year)
         {
+            _logger.LogInformation($"Call ConsolidatedController.GetByMonthYearAsync => {month} and {year}");
             return Ok(await _applicationServiceConsolidated.GetByMonthYearAsync(month, year));
         }
     }

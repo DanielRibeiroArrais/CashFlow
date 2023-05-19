@@ -13,6 +13,7 @@ D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\AutoFixture.Xunit2
 D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Azure.Core.dll
 D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Azure.Identity.dll
 D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Castle.Core.dll
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Elasticsearch.Net.dll
 D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Fare.dll
 D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Hangfire.AspNetCore.dll
 D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Hangfire.Core.dll
@@ -43,6 +44,13 @@ D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Microsoft.Win32.Sy
 D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Mono.TextTemplating.dll
 D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Moq.dll
 D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Serilog.dll
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Serilog.Extensions.Logging.dll
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Serilog.Formatting.Compact.dll
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Serilog.Formatting.Elasticsearch.dll
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Serilog.Sinks.Elasticsearch.dll
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Serilog.Sinks.File.dll
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Serilog.Sinks.PeriodicBatching.dll
 D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Jobs\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll

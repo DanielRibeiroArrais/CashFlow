@@ -8,12 +8,15 @@ D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\CashFlow.Presentation.runtimeconfig.jso
 D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\CashFlow.Presentation.exe
 D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\CashFlow.Jobs.dll
 D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\CashFlow.Presentation.dll
+D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\Serilog.dll
 D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\Hangfire.Core.dll
 D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\Autofac.dll
 D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\Microsoft.EntityFrameworkCore.dll
 D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\Hangfire.NetCore.dll
 D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\Autofac.Extensions.DependencyInjection.dll
 D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\CashFlow.Infrastructure.Data.dll
+D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\Serilog.Sinks.Elasticsearch.dll
+D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\Serilog.Extensions.Logging.dll
 D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\Hangfire.AspNetCore.dll
 D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\HangfireBasicAuthenticationFilter.dll
 D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\CashFlow.Application.dll
@@ -28,6 +31,10 @@ D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\Microsoft.EntityFrameworkCore.Relationa
 D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\Newtonsoft.Json.dll
 D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
 D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\CashFlow.Domain.dll
+D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\Elasticsearch.Net.dll
+D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\Serilog.Sinks.PeriodicBatching.dll
+D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\Serilog.Sinks.File.dll
+D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\Serilog.Formatting.Elasticsearch.dll
 D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\CashFlow.Domain.Core.dll
 D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\CashFlow.Infrastructure.CrossCutting.Adapter.dll
 D:\DESENV\C#\CashFlow\CashFlow\bin\Debug\CashFlow.Domain.Services.dll
