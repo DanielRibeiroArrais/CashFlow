@@ -85,7 +85,7 @@ Segue as informações de cada container e como acessar as aplicações e seus d
 - **CashFlow.Presentation:** O acesso a API pode ser feito no endereço abaixo. Ela possui todos os métodos devidamente documentados na própria interface do [Swagger](https://swagger.io/).
   - **Url:** https://localhost:55501/swagger/index.html
 
-- **CashFlow.Jobs:** Dashboard do Hangfire para administração dos jobs que executam em background. Nesse site é possível forçar a execução imediata de um Job agendado.
+- **CashFlow.Jobs:** Dashboard do Hangfire para administração dos jobs que executam em background. Nesse site é possível forçar a execução imediata do Job agendado.
   - **Url:** https://localhost:55502
   - **Usuário:** admin
   - **Senha:** admin
