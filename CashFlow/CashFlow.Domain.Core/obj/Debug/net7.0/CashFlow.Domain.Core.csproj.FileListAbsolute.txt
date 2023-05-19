@@ -1,0 +1,17 @@
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Domain.Core\bin\Debug\net7.0\CashFlow.Domain.Core.deps.json
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Domain.Core\bin\Debug\net7.0\CashFlow.Domain.Core.dll
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Domain.Core\bin\Debug\net7.0\CashFlow.Domain.Core.pdb
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Domain.Core\bin\Debug\net7.0\CashFlow.Application.DTO.dll
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Domain.Core\bin\Debug\net7.0\CashFlow.Domain.dll
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Domain.Core\bin\Debug\net7.0\CashFlow.Domain.pdb
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Domain.Core\bin\Debug\net7.0\CashFlow.Application.DTO.pdb
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Domain.Core\obj\Debug\net7.0\CashFlow.Domain.Core.csproj.AssemblyReference.cache
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Domain.Core\obj\Debug\net7.0\CashFlow.Domain.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Domain.Core\obj\Debug\net7.0\CashFlow.Domain.Core.AssemblyInfoInputs.cache
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Domain.Core\obj\Debug\net7.0\CashFlow.Domain.Core.AssemblyInfo.cs
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Domain.Core\obj\Debug\net7.0\CashFlow.Domain.Core.csproj.CoreCompileInputs.cache
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Domain.Core\obj\Debug\net7.0\CashFlow.Domain.Core.csproj.CopyComplete
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Domain.Core\obj\Debug\net7.0\CashFlow.Domain.Core.dll
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Domain.Core\obj\Debug\net7.0\refint\CashFlow.Domain.Core.dll
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Domain.Core\obj\Debug\net7.0\CashFlow.Domain.Core.pdb
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Domain.Core\obj\Debug\net7.0\ref\CashFlow.Domain.Core.dll

@@ -1,0 +1,12 @@
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Application.DTO\bin\Debug\net7.0\CashFlow.Application.DTO.deps.json
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Application.DTO\bin\Debug\net7.0\CashFlow.Application.DTO.dll
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Application.DTO\bin\Debug\net7.0\CashFlow.Application.DTO.pdb
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Application.DTO\obj\Debug\net7.0\CashFlow.Application.DTO.csproj.AssemblyReference.cache
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Application.DTO\obj\Debug\net7.0\CashFlow.Application.DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Application.DTO\obj\Debug\net7.0\CashFlow.Application.DTO.AssemblyInfoInputs.cache
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Application.DTO\obj\Debug\net7.0\CashFlow.Application.DTO.AssemblyInfo.cs
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Application.DTO\obj\Debug\net7.0\CashFlow.Application.DTO.csproj.CoreCompileInputs.cache
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Application.DTO\obj\Debug\net7.0\CashFlow.Application.DTO.dll
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Application.DTO\obj\Debug\net7.0\refint\CashFlow.Application.DTO.dll
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Application.DTO\obj\Debug\net7.0\CashFlow.Application.DTO.pdb
+D:\DESENV\C#\CashFlow\CashFlow\CashFlow.Application.DTO\obj\Debug\net7.0\ref\CashFlow.Application.DTO.dll
