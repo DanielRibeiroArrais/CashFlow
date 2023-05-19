@@ -1,6 +1,5 @@
 ﻿using CashFlow.Application.DTO.Enum;
 using CashFlow.Domain.Models;
-using System.ComponentModel.DataAnnotations;
 
 namespace CashFlow.Application.DTO.DTO
 {

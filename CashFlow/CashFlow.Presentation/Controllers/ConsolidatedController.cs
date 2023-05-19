@@ -44,7 +44,6 @@ namespace CashFlow.Presentation.Controllers
             return Ok(await _applicationServiceConsolidated.GetByYearAsync(year));
         }
 
-
         /// <summary>
         /// Consulta consolidado por mês e ano
         /// </summary>
