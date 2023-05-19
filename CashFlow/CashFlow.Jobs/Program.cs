@@ -21,12 +21,11 @@ builder.Services.AddMemoryCache();
 
 
 var logger = new LoggerConfiguration()
-              .Enrich.FromLogContext()
-              .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri(builder.Configuration.GetSection("ELASTIC_HOST").Value))
-              {
-                  AutoRegisterTemplate = true,
-              })
-          .CreateLogger();
+    .Enrich.FromLogContext()
+    .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri(builder.Configuration.GetSection("ELASTIC_HOST").Value))
+    {
+        AutoRegisterTemplate = true,
+    }).CreateLogger();
 
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
