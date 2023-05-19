@@ -1,0 +1,30 @@
+version: '3.4'
+
+services:
+  cashflow.presentation:
+    depends_on:
+      - cashflow.database
+    image: ${DOCKER_REGISTRY-}cashflow-presentation
+    build:
+      context: .
+      dockerfile: CashFlow.Presentation/Dockerfile
+
+  cashflow.jobs:
+    depends_on:
+      - cashflow.presentation
+    image: ${DOCKER_REGISTRY-}cashflow-jobs
+    build:
+      context: .
+      dockerfile: CashFlow.Jobs/Dockerfile
+      
+  cashflow.database:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "senha@1234"
+      TZ: "America/Sao_Paulo"
+    ports:
+      - "1433:1433"
+    volumes:
+      - ${APPDATA}/cashflow/database:/var/opt/mssql/data
+    container_name: Cashflow.Database

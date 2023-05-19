@@ -1,0 +1,62 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "CashFlow.Domain.Services/1.0.0": {
+        "dependencies": {
+          "CashFlow.Domain.Core": "1.0.0"
+        },
+        "runtime": {
+          "CashFlow.Domain.Services.dll": {}
+        }
+      },
+      "CashFlow.Application.DTO/1.0.0": {
+        "runtime": {
+          "CashFlow.Application.DTO.dll": {}
+        }
+      },
+      "CashFlow.Domain/1.0.0": {
+        "dependencies": {
+          "CashFlow.Application.DTO": "1.0.0"
+        },
+        "runtime": {
+          "CashFlow.Domain.dll": {}
+        }
+      },
+      "CashFlow.Domain.Core/1.0.0": {
+        "dependencies": {
+          "CashFlow.Domain": "1.0.0"
+        },
+        "runtime": {
+          "CashFlow.Domain.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CashFlow.Domain.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CashFlow.Application.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CashFlow.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CashFlow.Domain.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

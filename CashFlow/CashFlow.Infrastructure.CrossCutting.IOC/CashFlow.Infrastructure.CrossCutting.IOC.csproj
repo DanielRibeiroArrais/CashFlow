@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CashFlow.Application\CashFlow.Application.csproj" />
+    <ProjectReference Include="..\CashFlow.Domain.Services\CashFlow.Domain.Services.csproj" />
+    <ProjectReference Include="..\CashFlow.Infrastructure.CrossCutting.Adapter\CashFlow.Infrastructure.CrossCutting.Adapter.csproj" />
+    <ProjectReference Include="..\CashFlow.Infrastructure.Repository\CashFlow.Infrastructure.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
