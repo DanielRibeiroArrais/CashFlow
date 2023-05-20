@@ -28,7 +28,7 @@ namespace CashFlow.Test.Application
             int fakeOperationYear = 2023;
             int fakeOperationMonth = 3;
 
-            var fakeConsolidatedDTO = GetCustomerBasketFake(fakeId, fakeTotal, fakeOperationYear, fakeOperationMonth);
+            var fakeConsolidatedDTO = ConsolidatedDTOFake(fakeId, fakeTotal, fakeOperationYear, fakeOperationMonth);
 
             _applicationServiceConsolidatedMock
                 .Setup(x => x.GetByMonthYearAsync(It.IsAny<int>(), It.IsAny<int>()))
@@ -49,7 +49,7 @@ namespace CashFlow.Test.Application
             Assert.Equal((((ObjectResult)actionResult.Result).Value as ConsolidatedDTO).OperationMonth, fakeOperationMonth);
         }
 
-        private ConsolidatedDTO GetCustomerBasketFake(int fakeId, decimal fakeTotal, int fakeOperationYear, int fakeOperationMonth)
+        private ConsolidatedDTO ConsolidatedDTOFake(int fakeId, decimal fakeTotal, int fakeOperationYear, int fakeOperationMonth)
         {
             return new ConsolidatedDTO
             {

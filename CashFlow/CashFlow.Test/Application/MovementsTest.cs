@@ -31,7 +31,7 @@ namespace CashFlow.Test.Application
             decimal fakeValue = 100;
             DateTime fakeOperationDate = DateTime.UtcNow;
 
-            var fakeMovementsDTO = GetMovementsDTOFake(fakeId, fakeMovementType, fakeDescription, fakeObservation, fakeValue, fakeOperationDate);
+            var fakeMovementsDTO = MovementsDTOFake(fakeId, fakeMovementType, fakeDescription, fakeObservation, fakeValue, fakeOperationDate);
 
             _applicationServiceMovementsMock
                 .Setup(x => x.GetByIdAsync(It.IsAny<int>()))
@@ -64,7 +64,7 @@ namespace CashFlow.Test.Application
             decimal fakeValue = 100;
             DateTime fakeOperationDate = DateTime.UtcNow;
 
-            var fakeMovementsDTO = GetMovementsDTOFake(fakeId, fakeMovementType, fakeDescription, fakeObservation, fakeValue, fakeOperationDate);
+            var fakeMovementsDTO = MovementsDTOFake(fakeId, fakeMovementType, fakeDescription, fakeObservation, fakeValue, fakeOperationDate);
 
             _applicationServiceMovementsMock
                 .Setup(x => x.CreateAsync(It.IsAny<MovementsDTO>()))
@@ -86,7 +86,7 @@ namespace CashFlow.Test.Application
             Assert.Equal((((ObjectResult)actionResult.Result).Value as MovementsDTO).OperationDate, fakeOperationDate);
         }
 
-        private MovementsDTO GetMovementsDTOFake(int fakeId, EnumMovementType fakeMovementType, string fakeDescription, string? fakeObservation, decimal fakeValue, DateTime fakeOperationDate)
+        private MovementsDTO MovementsDTOFake(int fakeId, EnumMovementType fakeMovementType, string fakeDescription, string? fakeObservation, decimal fakeValue, DateTime fakeOperationDate)
         {
             return new MovementsDTO
             {
