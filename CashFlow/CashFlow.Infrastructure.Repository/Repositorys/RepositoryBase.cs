@@ -13,12 +13,13 @@ namespace CashFlow.Infrastructure.Repository.Repositorys
             _context = Context;
         }
 
-        public virtual async Task CreateAsync(TEntity obj)
+        public virtual async Task<TEntity> CreateAsync(TEntity obj)
         {
             try
             {
                 await _context.Set<TEntity>().AddAsync(obj);
                 await _context.SaveChangesAsync();
+                return obj;
             }
             catch (Exception)
             {
@@ -36,12 +37,13 @@ namespace CashFlow.Infrastructure.Repository.Repositorys
             return await _context.Set<TEntity>().ToListAsync();
         }
 
-        public virtual async Task UpdateAsync(TEntity obj)
+        public virtual async Task<TEntity> UpdateAsync(TEntity obj)
         {
             try
             {
                 _context.Entry(obj).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
+                return obj;
             }
             catch (Exception)
             {

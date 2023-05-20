@@ -16,9 +16,9 @@ namespace CashFlow.Application.Service
             _mapperMovements = mapperMovements;
         }
 
-        public async Task CreateAsync(MovementsDTO movementsDTO)
+        public async Task<MovementsDTO> CreateAsync(MovementsDTO movementsDTO)
         {
-            await _serviceMovements.CreateAsync(_mapperMovements.MapperToEntity(movementsDTO));
+            return _mapperMovements.MapperToDTO(await _serviceMovements.CreateAsync(_mapperMovements.MapperToEntity(movementsDTO)));
         }
 
         public async Task<IEnumerable<MovementsDTO>> GetAllAsync()
@@ -36,9 +36,9 @@ namespace CashFlow.Application.Service
             await _serviceMovements.DeleteAsync(await _serviceMovements.GetByIdAsync(id));
         }
 
-        public async Task UpdateAsync(MovementsDTO movementsDTO)
+        public async Task<MovementsDTO> UpdateAsync(MovementsDTO movementsDTO)
         {
-            await _serviceMovements.UpdateAsync(_mapperMovements.MapperToEntity(movementsDTO));
+            return _mapperMovements.MapperToDTO(await _serviceMovements.UpdateAsync(_mapperMovements.MapperToEntity(movementsDTO)));
         }
     }
 }

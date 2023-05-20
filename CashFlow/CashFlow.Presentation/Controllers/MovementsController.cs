@@ -29,7 +29,7 @@ namespace CashFlow.Presentation.Controllers
         public async Task<ActionResult<MovementsDTO?>> GetByIdAsync([FromRoute] int id)
         {
             _logger.LogInformation($"Call MovementsController.GetByIdAsync => {id}");
-            return await _applicationServiceMovements.GetByIdAsync(id);
+            return Ok(await _applicationServiceMovements.GetByIdAsync(id));
         }
 
         /// <summary>
@@ -49,10 +49,10 @@ namespace CashFlow.Presentation.Controllers
         /// <param name="movements"></param>
         /// <returns></returns>
         [HttpPost("")]
-        public async Task CreateAsync([FromBody] MovementsDTO movements)
+        public async Task<ActionResult<MovementsDTO>> CreateAsync([FromBody] MovementsDTO movements)
         {
             _logger.LogInformation($"Call MovementsController.CreateAsync => {movements}");
-            await _applicationServiceMovements.CreateAsync(movements);
+            return Ok(await _applicationServiceMovements.CreateAsync(movements));
         }
 
         /// <summary>
@@ -62,12 +62,12 @@ namespace CashFlow.Presentation.Controllers
         /// <param name="movement"></param>
         /// <returns></returns>
         [HttpPut("{id}")]
-        public async Task UpdateAsync([FromRoute] int id, [FromBody] MovementsDTO movement)
+        public async Task<ActionResult<MovementsDTO>> UpdateAsync([FromRoute] int id, [FromBody] MovementsDTO movement)
         {
             movement.Id = id;
 
             _logger.LogInformation($"Call MovementsController.UpdateAsync => {id} and {movement}");
-            await _applicationServiceMovements.UpdateAsync(movement);
+            return Ok(await _applicationServiceMovements.UpdateAsync(movement));
         }
     }
 }

@@ -12,9 +12,9 @@ namespace CashFlow.Domain.Services.Services
             _repository = Repository;
         }
 
-        public virtual async Task CreateAsync(TEntity obj)
+        public virtual async Task<TEntity> CreateAsync(TEntity obj)
         {
-            await _repository.CreateAsync(obj);
+            return await _repository.CreateAsync(obj);
         }
 
         public virtual async Task<TEntity> GetByIdAsync(int id)
@@ -27,9 +27,9 @@ namespace CashFlow.Domain.Services.Services
             return await _repository.GetAllAsync();
         }
 
-        public virtual async Task UpdateAsync(TEntity obj)
+        public virtual async Task<TEntity> UpdateAsync(TEntity obj)
         {
-            await _repository.UpdateAsync(obj);
+            return await _repository.UpdateAsync(obj);
         }
 
         public virtual async Task DeleteAsync(TEntity obj)
