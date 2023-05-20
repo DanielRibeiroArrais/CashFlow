@@ -86,6 +86,39 @@ namespace CashFlow.Test.Application
             Assert.Equal((((ObjectResult)actionResult.Result).Value as MovementsDTO).OperationDate, fakeOperationDate);
         }
 
+        [Fact]
+        public async Task Put_Movements_Success()
+        {
+            //Arrange
+            int fakeId = 1;
+            EnumMovementType fakeMovementType = EnumMovementType.Credit;
+            string fakeDescription = "description";
+            string? fakeObservation = null;
+            decimal fakeValue = 100;
+            DateTime fakeOperationDate = DateTime.UtcNow;
+
+            var fakeMovementsDTO = MovementsDTOFake(fakeId, fakeMovementType, fakeDescription, fakeObservation, fakeValue, fakeOperationDate);
+
+            _applicationServiceMovementsMock
+                .Setup(x => x.UpdateAsync(It.IsAny<MovementsDTO>()))
+                .Returns(Task.FromResult(fakeMovementsDTO));
+
+            //Act
+            var movementsController =
+                new MovementsController(_loggerMock.Object, _applicationServiceMovementsMock.Object);
+
+            var actionResult = await movementsController.UpdateAsync(fakeMovementsDTO.Id, fakeMovementsDTO);
+
+            //Assert
+            Assert.Equal((actionResult.Result as OkObjectResult).StatusCode, (int)System.Net.HttpStatusCode.OK);
+            Assert.Equal((((ObjectResult)actionResult.Result).Value as MovementsDTO).Id, fakeId);
+            Assert.Equal((((ObjectResult)actionResult.Result).Value as MovementsDTO).MovementType, EnumMovementType.Credit);
+            Assert.Equal((((ObjectResult)actionResult.Result).Value as MovementsDTO).Description, fakeDescription);
+            Assert.Equal((((ObjectResult)actionResult.Result).Value as MovementsDTO).Observation, fakeObservation);
+            Assert.Equal((((ObjectResult)actionResult.Result).Value as MovementsDTO).Value, fakeValue);
+            Assert.Equal((((ObjectResult)actionResult.Result).Value as MovementsDTO).OperationDate, fakeOperationDate);
+        }
+
         private MovementsDTO MovementsDTOFake(int fakeId, EnumMovementType fakeMovementType, string fakeDescription, string? fakeObservation, decimal fakeValue, DateTime fakeOperationDate)
         {
             return new MovementsDTO
