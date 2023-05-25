@@ -25,7 +25,7 @@ Os usuários usam o sistema na Internet para realizem lançamentos de Débitos e
 
 
 ## 2.2 - Diagrama de Container
-O diagrama de container nos mostra que o sistema CashFlow (a caixa tracejada) é composto de XXXXXX containers: uma aplicação em API, um Job para realização da consolidação dos saldos, banco de dados SQL e XXXX Elastic. A aplicação API será utilizado as tecnologias C# CORE. Utilizando API JSON/HTTPS executando no lado do servidor fornece. A aplicação API obtém informações do banco de dados (um esquema de banco de dados relacional). O worker service de alerta, se comunica com a API obtendo dados gerados pelos sensores e se for preciso gera o alerta para os usuários. Tanto o worker service de WhatsApp, SMS e Email fica aguardando a geração de uma nova mensagem e realiza o disparo necessário.
+O diagrama de container nos mostra que o sistema CashFlow (a caixa tracejada) é composto de quatro containers: uma aplicação em API, um Job para realização da consolidação dos saldos, banco de dados SQL e Elasticsearch. Na aplicação API será utilizado as tecnologias C# CORE. Utilizando API JSON/HTTPS executando no lado do servidor. A aplicação API obtém informações do banco de dados (um esquema de banco de dados relacional). O Job, se comunica com o banco de dados para realizar a consolidação dos valores.
 
 ![alt text](https://github.com/DanielRibeiroArrais/CashFlow/blob/main/img/diagrama-container.png)
 
