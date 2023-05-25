@@ -2,10 +2,7 @@
 Aplicação para movimentação de fluxo de caixa e consolidação.
 
 
-
-
-
-## Tecnologias Utilizadas
+## 1 - Tecnologias Utilizadas
 
 * [C# .NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
 * [Docker](https://docs.docker.com/engine/reference/builder/)
@@ -17,41 +14,37 @@ Aplicação para movimentação de fluxo de caixa e consolidação.
 * [Kibana](https://www.elastic.co/pt/kibana/)
 
 
-
-
-
-## Visão geral da Arquitetura
-EM BREVE
-
-## Modelagem Arquitetural
+## 2 - Modelagem Arquitetural
 Nesta seção será apresenta a modelagem arquitetural da solução proposta, de forma a permitir seu completo entendimento visando à implementação da prova de conceito para o Diagrama de Contexto e Container utilizaremos o modelo C4, já o Diagrama de Componentes utilizaremos o padrão UML.
 
 
-### Diagrama de Contexto
+## 2.1 - Diagrama de Contexto
 Os usuários usam o sistema na Internet para realizem lançamentos de Débitos e Créditos. Também será necessário um Job para realizar a consolidação do saldo diário.
 
+![alt text](https://github.com/DanielRibeiroArrais/CashFlow/blob/main/img/diagrama-contexto.png)
 
 
-### Diagrama de Container
+## 2.2 - Diagrama de Container
 O diagrama de container nos mostra que o sistema CashFlow (a caixa tracejada) é composto de XXXXXX containers: uma aplicação em API, um Job para realização da consolidação dos saldos, banco de dados SQL e XXXX Elastic. A aplicação API será utilizado as tecnologias C# CORE. Utilizando API JSON/HTTPS executando no lado do servidor fornece. A aplicação API obtém informações do banco de dados (um esquema de banco de dados relacional). O worker service de alerta, se comunica com a API obtendo dados gerados pelos sensores e se for preciso gera o alerta para os usuários. Tanto o worker service de WhatsApp, SMS e Email fica aguardando a geração de uma nova mensagem e realiza o disparo necessário.
 
+![alt text](https://github.com/DanielRibeiroArrais/CashFlow/blob/main/img/diagrama-container.png)
 
-### Diagrama de Componentes
+## 2.3 - Diagrama de Componentes
 O diagrama abaixo apresenta a comunicação entre os componentes da arquitetura e as tecnologias. Os componentes estão organizados de forma que possam ser reutilizados. Fornecem interfaces bem definidas de acordo com suas responsabilidades.
 
+![alt text](https://github.com/DanielRibeiroArrais/CashFlow/blob/main/img/diagrama-componentes.png)
 
-### Arquitetura de Dados
+## 3 - Arquitetura de Dados
 Como a aplicação utiliza um único banco de dados relacional, apenas um modelo de dados foi gerado.
 
+![alt text](https://github.com/DanielRibeiroArrais/CashFlow/blob/main/img/arquitetura-dados.png)
+
+## 4 - Arquitetura de implantação em nuvem
+
+![alt text](https://github.com/DanielRibeiroArrais/CashFlow/blob/main/img/implantacao-nuvem.png)
 
 
-
-
-
-
-
-
-## Instruções
+## 5 - Instruções
 O [Docker](https://www.docker.com/get-started/) precisar estar instalado em sua máquina juntamente com o [Docker Compose](https://docs.docker.com/compose/install/). Tenha certeza de ter ambos estejam instalados, configurados e em execução. O projeto é composto por quatro componentes principais:
 
 * API
@@ -62,17 +55,11 @@ O [Docker](https://www.docker.com/get-started/) precisar estar instalado em sua 
 Cada um destes componentes é representado por um container. Todos estes containers serão criados e configurados automaticamente, não existe a necessidade de nenhum comando manual a não ser o próprio `docker compose up -d`. Inclusive o database utilizado no projeto também será criado e configurado de forma automática.
 
 
+## 6 - Organização dos Projetos
+
+![alt text](https://github.com/DanielRibeiroArrais/CashFlow/blob/main/img/organizacao-projetos.png)
 
 
-
-## Repositório
---
-
-
-
-
-
-## Organização dos Projetos
 Segue abaixo uma breve descrição de cada projeto (.csproj):
 
 - **CashFlow.Presentation:** Descrição em breve.
@@ -100,10 +87,7 @@ Segue abaixo uma breve descrição de cada projeto (.csproj):
 - **CashFlow.Test:** Descrição em breve.
 
 
-
-
-
-## Acesso a Aplicação
+## 7 - Acesso a Aplicação
 Segue as informações de cada container e como acessar as aplicações e seus dados:
 
 - **CashFlow.Presentation:** O acesso a API pode ser feito no endereço abaixo. Ela possui todos os métodos devidamente documentados na própria interface do [Swagger](https://swagger.io/).
