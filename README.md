@@ -23,6 +23,30 @@ Aplicação para movimentação de fluxo de caixa e consolidação.
 ## Visão geral da Arquitetura
 EM BREVE
 
+## Modelagem Arquitetural
+Nesta seção será apresenta a modelagem arquitetural da solução proposta, de forma a permitir seu completo entendimento visando à implementação da prova de conceito para o Diagrama de Contexto e Container utilizaremos o modelo C4, já o Diagrama de Componentes utilizaremos o padrão UML.
+
+
+### Diagrama de Contexto
+Os usuários usam o sistema na Internet para realizem lançamentos de Débitos e Créditos. Também será necessário um Job para realizar a consolidação do saldo diário.
+
+
+
+### Diagrama de Container
+O diagrama de container nos mostra que o sistema CashFlow (a caixa tracejada) é composto de XXXXXX containers: uma aplicação em API, um Job para realização da consolidação dos saldos, banco de dados SQL e XXXX Elastic. A aplicação API será utilizado as tecnologias C# CORE. Utilizando API JSON/HTTPS executando no lado do servidor fornece. A aplicação API obtém informações do banco de dados (um esquema de banco de dados relacional). O worker service de alerta, se comunica com a API obtendo dados gerados pelos sensores e se for preciso gera o alerta para os usuários. Tanto o worker service de WhatsApp, SMS e Email fica aguardando a geração de uma nova mensagem e realiza o disparo necessário.
+
+
+### Diagrama de Componentes
+O diagrama abaixo apresenta a comunicação entre os componentes da arquitetura e as tecnologias. Os componentes estão organizados de forma que possam ser reutilizados. Fornecem interfaces bem definidas de acordo com suas responsabilidades.
+
+
+### Arquitetura de Dados
+Como a aplicação utiliza um único banco de dados relacional, apenas um modelo de dados foi gerado.
+
+
+
+
+
 
 
 
