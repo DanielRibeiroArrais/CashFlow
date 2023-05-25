@@ -69,8 +69,8 @@ namespace CashFlow.Application.Service
                         ))
                     .FirstOrDefault();
 
-
-                newConsolidateds.Add(newConsolidated);
+                if (newConsolidated != null)
+                    newConsolidateds.Add(newConsolidated);
             }
 
             foreach (var newConsolidatedItem in newConsolidateds)
