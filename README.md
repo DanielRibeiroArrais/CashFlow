@@ -4,11 +4,11 @@ Aplicação para movimentação de fluxo de caixa e consolidação.
 
 ## 1 - Tecnologias Utilizadas
 
-* [C# .NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
+* [C# .NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 * [Docker](https://docs.docker.com/engine/reference/builder/)
 * [SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
 * [Swagger](https://swagger.io/)
-* [Health Checks](https://learn.microsoft.com/pt-br/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-7.0)
+* [Health Checks](https://learn.microsoft.com/pt-br/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-8.0)
 * [Hangfire](https://www.hangfire.io/)
 * [ElasticSearch](https://www.elastic.co/pt/)
 * [Kibana](https://www.elastic.co/pt/kibana/)
